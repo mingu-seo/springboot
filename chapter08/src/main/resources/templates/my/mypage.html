@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>MyPage</title>
+</head>
+<body>
+
+<h2>마이페이지</h2>
+
+<!-- 컨트롤러에서 넣은 loginUser -->
+<p>
+  로그인 사용자:
+  <span th:text="${loginUser.username}"></span>
+</p>
+
+<!-- ControllerAdvice에서 공통으로 넣은 currentUser -->
+<div th:if="${currentUser != null}">
+  <p>공통 주입 사용자: <span th:text="${currentUser.username}"></span></p>
+</div>
+
+<form method="post" action="/auth/logout">
+  <button type="submit">로그아웃</button>
+</form>
+
+</body>
+</html>

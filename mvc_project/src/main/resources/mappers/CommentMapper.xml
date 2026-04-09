@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mvc_project.comment.mapper.CommentMapper">
+
+    <!-- 댓글 등록 -->
+    <insert id="insert" parameterType="CommentDTO">
+        INSERT INTO comment (content, writer, parent_no, regdate)
+        VALUES (#{content}, #{writer}, #{parentNo}, NOW())
+    </insert>
+
+    <!-- 댓글 수 -->
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM comment
+        WHERE parent_no = #{parentNo}
+    </select>
+
+    <!-- 댓글 목록 -->
+    <select id="list" resultType="CommentDTO">
+        SELECT c.*,
+               (SELECT name FROM member WHERE no = c.writer) AS writer_name
+        FROM comment c
+        WHERE c.parent_no = #{parentNo}
+        ORDER BY c.regdate DESC
+            LIMIT #{startIdx}, 10
+    </select>
+
+    <!-- 댓글 삭제 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM comment WHERE no = #{no}
+    </delete>
+</mapper>

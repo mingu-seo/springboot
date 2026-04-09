@@ -1,0 +1,209 @@
+<div th:replace="~{layout/default :: layout(
+        ${'MVC 프로젝트'},
+        ~{::content}
+      )}">
+  <th:block th:fragment="content">
+  <script th:inline="javascript">
+    // 게시글 삭제
+    function boardDel() {
+      if (confirm('삭제하시겠습니까?')) {
+        $('#deleteForm').submit();
+      }
+    }
+
+    var boardNo = [[${board.no}]];
+
+    // 댓글 목록 조회
+    function getComment(page) {
+      $.ajax({
+        url: '/api/comments',
+        data: { parentNo: boardNo, page: page },
+        success: function(res) {
+          renderComments(res, page);
+        }
+      });
+    }
+
+    // 댓글 렌더링
+    function renderComments(data, currentPage) {
+      var html = '';
+      html += '<p><span><strong>총 ' + data.totalCount + '개</strong> | ' + data.page + '/' + data.totalPage + '페이지</span></p>';
+      html += '<table class="list"><colgroup><col width="80px"/><col width="*"/><col width="100px"/><col width="200px"/></colgroup><tbody>';
+
+      if (data.list.length === 0) {
+        html += '<tr><td class="first" colspan="4">등록된 댓글이 없습니다.</td></tr>';
+      } else {
+        for (var i = 0; i < data.list.length; i++) {
+          var c = data.list[i];
+          html += '<tr>';
+          html += '<td>' + c.no + '</td>';
+          html += '<td class="txt_l" style="text-align:left;">' + c.content;
+          html += ' <a href="javascript:commentDel(' + c.no + ');">[삭제]</a>';
+          html += '</td>';
+          html += '<td class="writer">' + c.writerName + '</td>';
+          html += '<td class="date">' + formatDate(c.regdate) + '</td>';
+          html += '</tr>';
+        }
+      }
+      html += '</tbody></table>';
+
+      // 페이징
+      if (data.totalPage > 0) {
+        html += '<div class="pagenate clear"><ul class="paging">';
+        if (data.prev) {
+          html += '<li><a href="javascript:getComment(' + (data.startPage - 1) + ');">&lt;&lt;</a></li>';
+        }
+        for (var p = data.startPage; p <= data.endPage; p++) {
+          if (p === currentPage) {
+            html += '<li><a href="#" class="current">' + p + '</a></li>';
+          } else {
+            html += '<li><a href="javascript:getComment(' + p + ');">' + p + '</a></li>';
+          }
+        }
+        if (data.next) {
+          html += '<li><a href="javascript:getComment(' + (data.endPage + 1) + ');">&gt;&gt;</a></li>';
+        }
+        html += '</ul></div>';
+      }
+
+      $('#commentArea').html(html);
+    }
+
+    function formatDate(dateArr) {
+      if (!dateArr) return '';
+      // LocalDateTime은 [2025,3,25,10,30,0] 형태로 전달됨
+      if (Array.isArray(dateArr)) {
+        var y = dateArr[0];
+        var m = String(dateArr[1]).padStart(2, '0');
+        var d = String(dateArr[2]).padStart(2, '0');
+        var h = String(dateArr[3] || 0).padStart(2, '0');
+        var mi = String(dateArr[4] || 0).padStart(2, '0');
+        return y + '-' + m + '-' + d + ' ' + h + ':' + mi;
+      }
+      return dateArr;
+    }
+
+    $(function() {
+      getComment(1);
+    });
+
+    var loginMember = [[${session.loginMember}]];  // 서버 → JS 변수로 변환
+
+    // 댓글 저장
+    function goSave() {
+      if (!loginMember) {
+        alert('댓글은 로그인 후 작성 가능합니다.');
+        return;
+      }
+      if ($('#content').val().trim() === '') {
+        alert('댓글을 입력해 주세요');
+        $('#content').focus();
+        return;
+      }
+      if (confirm('댓글을 저장하시겠습니까?')) {
+        $.ajax({
+          url: '/api/comments',
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            parentNo: boardNo,
+            content: $('#content').val(),
+            writer: 3
+          }),
+          success: function(res) {
+            if (res.result === 1) {
+              alert('댓글이 정상적으로 등록되었습니다.');
+              $('#content').val('');
+              getComment(1);
+            }
+          }
+        });
+      }
+    }
+
+    // 댓글 삭제
+    function commentDel(no) {
+      if (confirm('댓글을 삭제하시겠습니까?')) {
+        $.ajax({
+          url: '/api/comments/' + no,
+          type: 'DELETE',
+          success: function(res) {
+            if (res.result === 1) {
+              alert('댓글이 정상적으로 삭제되었습니다.');
+              getComment(1);
+            }
+          }
+        });
+      }
+    }
+  </script>
+  <div class="sub">
+    <div class="size">
+      <h3 class="sub_title">답변 게시판</h3>
+      <div class="bbs">
+        <!-- 게시글 상세 -->
+        <div class="view">
+          <div class="title">
+            <dl>
+              <dt th:text="${board.title}"></dt>
+              <dd class="date">
+                작성일 : <span th:text="${#temporals.format(board.regdate, 'yyyy-MM-dd HH:mm:ss')}"></span>
+              </dd>
+            </dl>
+          </div>
+          <div class="cont" th:utext="${board.content}"></div>
+
+          <!-- 첨부파일 -->
+          <dl class="file" th:if="${board.filenameOrg != null and board.filenameOrg != ''}">
+            <dt>첨부파일</dt>
+            <dd>
+              <a th:href="@{/board/download(filenameOrg=${board.filenameOrg}, filenameReal=${board.filenameReal})}"
+                 target="_blank" th:text="${board.filenameOrg}"></a>
+            </dd>
+          </dl>
+
+          <!-- 버튼 -->
+          <div class="btnSet clear">
+            <div class="fl_l">
+              <a th:href="@{/board/list}" class="btn">목록</a>
+              <a th:href="@{/board/reply/{no}(no=${board.no})}" class="btn">답변</a>
+              <th:block th:if="${session.loginMember != null and session.loginMember.no == board.writer}">
+                <a th:href="@{/board/edit/{no}(no=${board.no})}" class="btn">수정</a>
+                <a href="javascript:boardDel();" class="btn">삭제</a>
+              </th:block>
+            </div>
+          </div>
+        </div>
+
+        <!-- 삭제용 폼 -->
+        <form id="deleteForm" th:action="@{/board/delete/{no}(no=${board.no})}" method="post" style="display:none;"></form>
+
+        <!-- 댓글 입력 -->
+        <div>
+          <table class="board_write">
+            <colgroup>
+              <col width="*" />
+              <col width="100px" />
+            </colgroup>
+            <tbody>
+            <tr>
+              <td>
+                <textarea name="content" id="content" style="height:50px;"></textarea>
+              </td>
+              <td>
+                <div class="btnSet" style="text-align:right;">
+                  <a class="btn" href="javascript:goSave();">저장</a>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+          <!-- 댓글 목록 영역 -->
+          <div id="commentArea"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </th:block>
+</div>

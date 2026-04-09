@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="common/header :: header"></div>
+<p th:text="${name}"></p>
+<p th:text="'이름: ' + ${name}"></p>
+<p>이름: [[${name}]]</p>
+<h3>객체 출력</h3>
+<p th:text="${member.id}"></p>
+<p th:text="${member.name}"></p>
+<p th:text="${member.age}"></p>
+<p th:if="${member.age >= 20}">성인</p>
+<p th:unless="${member.age >= 20}">미성년자</p>
+<h3>리스트 출력</h3>
+<ul>
+    <li th:each="m : ${list}">
+        <span th:text="${m.name}"></span>
+        <span th:text="${m.id}"></span>
+        <span th:text="${m.age}"></span>
+    </li>
+</ul>
+<h3>링크 처리</h3>
+<a th:href="@{/member/view(id=${member.id})}">
+    상세보기
+</a>
+
+
+</body>
+</html>

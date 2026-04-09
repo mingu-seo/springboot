@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko" th:fragment="layout(CONTENT_TITLE, content)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${CONTENT_TITLE + ' - MVC Project'}">MVC Project</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- 헤더 -->
+    <th:block th:replace="~{fragments/header :: header}"></th:block>
+
+    <!-- 본문 -->
+    <div th:replace="${content}"></div>
+
+    <!-- 푸터 -->
+    <th:block th:replace="~{fragments/footer :: footer}"></th:block>
+</div>
+
+<!-- 알림 메시지 처리 -->
+<script th:if="${msg}">
+    alert('[[${msg}]]');
+</script>
+</body>
+</html>

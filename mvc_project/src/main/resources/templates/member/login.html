@@ -1,0 +1,43 @@
+<div th:replace="~{layout/default :: layout(
+        ${'MVC 프로젝트'},
+        ~{::content}
+      )}">
+  <th:block th:fragment="content">
+  <script>
+    function loginCheck() {
+      if ($('#email').val() === '') {
+        alert('이메일을 입력하세요');
+        return false;
+      }
+      if ($('#pwd').val() === '') {
+        alert('비밀번호를 입력하세요');
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <form th:action="@{/member/login}" method="post" onsubmit="return loginCheck();">
+    <div class="sub">
+      <div class="size">
+        <h3 class="sub_title">로그인</h3>
+        <div class="member">
+          <div class="box">
+            <fieldset class="login_form">
+              <ul>
+                <li><input type="text" id="email" name="email" placeholder="이메일"></li>
+                <li><input type="password" id="pwd" name="pwd" placeholder="비밀번호"></li>
+              </ul>
+              <div class="login_btn"><input type="submit" value="로그인"/></div>
+            </fieldset>
+            <div class="btnSet clear">
+              <div>
+                <a th:href="@{/member/join}" class="btn">회원가입</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  </th:block>
+</div>

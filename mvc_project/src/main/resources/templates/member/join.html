@@ -1,0 +1,128 @@
+<div th:replace="~{layout/default :: layout(
+        ${'MVC 프로젝트'},
+        ~{::content}
+      )}">
+    <th:block th:fragment="content">
+    <script>
+        function goSave() {
+            var email = $('#email').val();
+            if (email === '') {
+                alert('이메일을 입력해주세요');
+                return;
+            }
+            // 이메일 중복체크
+            var isDuplicate = false;
+            $.ajax({
+                url: '/member/emailCheck',
+                data: {email: email},
+                async: false,
+                success: function(res) {
+                    if (res > 0) {
+                        alert('중복된 이메일 입니다.');
+                        isDuplicate = true;
+                    }
+                }
+            });
+            if (isDuplicate) return;
+
+            if ($('#pwd').val() === '') {
+                alert('비밀번호를 입력하세요');
+                return;
+            }
+            if ($('#pwd').val() !== $('#pwd_check').val()) {
+                alert('비밀번호가 일치하지 않습니다.');
+                return;
+            }
+            if ($('#name').val() === '') {
+                alert('이름을 입력하세요');
+                return;
+            }
+            $('#frm').submit();
+        }
+
+        function emailCheck() {
+            var email = $('#email').val();
+            if (email === '') {
+                alert('이메일을 입력해주세요');
+                return;
+            }
+            $.ajax({
+                url: '/member/emailCheck',
+                data: {email: email},
+                success: function(res) {
+                    if (res === 0) {
+                        alert('사용가능한 이메일입니다.');
+                    } else {
+                        alert('중복된 이메일 입니다.');
+                    }
+                }
+            });
+        }
+    </script>
+    <div class="sub">
+        <div class="size">
+            <h3 class="sub_title">회원가입</h3>
+            <form name="frm" id="frm" th:action="@{/member/join}" method="post">
+                <table class="board_write">
+                    <caption>회원가입</caption>
+                    <colgroup>
+                        <col width="20%" />
+                        <col width="*" />
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th>*이메일</th>
+                        <td>
+                            <input type="text" name="email" id="email" class="inNextBtn" style="float:left;">
+                            <span class="email_check">
+                                <a href="javascript:emailCheck();" class="btn bgGray" style="float:left; width:auto; clear:none;">중복확인</a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>*비밀번호</th>
+                        <td>
+                            <input type="password" name="pwd" id="pwd" style="float:left;">
+                            <span class="ptxt">비밀번호는 숫자, 영문 조합으로 8자 이상으로 입력해주세요.</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>*비밀번호<span>확인</span></th>
+                        <td><input type="password" name="pwd_check" id="pwd_check" style="float:left;"></td>
+                    </tr>
+                    <tr>
+                        <th>*이름</th>
+                        <td><input type="text" name="name" id="name" style="float:left;"></td>
+                    </tr>
+                    <tr>
+                        <th>*성별</th>
+                        <td>
+                            <select name="gender" id="gender">
+                                <option value="1">남성</option>
+                                <option value="2">여성</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>*생년월일</th>
+                        <td><input type="text" name="birthday" id="birthday" style="float:left;"></td>
+                    </tr>
+                    <tr>
+                        <th>*휴대폰 번호</th>
+                        <td>
+                            <input type="text" name="hp" id="hp" maxlength="15" style="float:left;">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="btnSet clear">
+                <div>
+                    <a href="javascript:;" class="btn" onclick="goSave();">가입</a>
+                    <a href="javascript:;" class="btn" onclick="history.back();">취소</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </th:block>
+</div>

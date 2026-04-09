@@ -1,0 +1,24 @@
+<th:block th:replace="~{common/layout :: layout(
+        ${'레이아웃을 이용한 등록폼'},
+        ~{::content}
+      )}">
+
+    <th:block th:fragment="content">
+        <form th:action="@{/member/save.do}" method="post"
+              th:object="${member}">
+
+          <input type="text" th:field="*{id}">
+          <input type="text" th:field="*{name}">
+          <button>저장</button>
+        </form>
+        <input type="checkbox" th:checked="${agree}">
+        <div th:class="${isActive} ? 'on' : 'off'">내용</div>
+        <div class="menu"
+             th:classappend="${isActive} ? 'active' : ''">
+            내용
+        </div>
+        <div th:text="${#temporals.format(regdate, 'yyyy-MM-dd HH:mm:ss')}"></div>
+        <div th:text="${#numbers.formatInteger(price, 0, 'COMMA')}"></div>
+    </th:block>
+
+</th:block>

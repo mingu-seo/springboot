@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>MEMBER</h1>
+<!-- ========== 권한별 표시 ========== -->
+<div th:if="${#authorization.expression('hasRole(''USER'')')}">
+    USER 권한만 표시
+</div>
+<div th:if="${#authorization.expression('hasRole(''MANAGER'')')}">
+    MANAGER 권한만 표시
+</div>
+<div th:if="${#authorization.expression('hasRole(''ADMIN'')')}">
+    ADMIN 권한만 표시
+</div>
+
+<!-- ========== 로그인 여부 ========== -->
+<div th:if="${#authorization.expression('isAuthenticated()')}">
+    로그인 후에만 표시
+</div>
+<div th:if="${#authorization.expression('isAnonymous()')}">
+    비로그인 사용자에게만 표시
+</div>
+
+<!-- ========== 사용자 정보 출력 ========== -->
+이메일 : <span th:text="${#authentication.name}"></span><br>
+권한 : <span th:text="${#authentication.authorities}"></span>
+</body>
+</html>

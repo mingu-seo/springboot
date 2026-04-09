@@ -1,0 +1,18 @@
+<div th:replace="~{layout/default :: layout(
+        ${'MVC 프로젝트'},
+        ~{::content}
+      )}">
+    <th:block th:fragment="content">
+    <div class="sub">
+        <div class="size">
+            <h3 class="sub_title">Spring Boot MVC Project</h3>
+            <div style="text-align:center; padding:50px 0;">
+                <p>답변형(계층형) 게시판 + 회원 로그인/가입 + 댓글(비동기)</p>
+                <div class="btnSet" style="margin-top:30px;">
+                    <a th:href="@{/board/list}" class="btn">게시판 바로가기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </th:block>
+</div>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<header th:fragment="header">
+  <div class="header">
+    <div class="size">
+      <h1><a th:href="@{/}">MVC Project</a></h1>
+      <nav>
+        <ul>
+          <li><a th:href="@{/board/list}">게시판</a></li>
+          <!-- 비로그인 시 -->
+          <li th:if="${session.loginMember == null}">
+            <a th:href="@{/member/login}">로그인</a>
+          </li>
+          <li th:if="${session.loginMember == null}">
+            <a th:href="@{/member/join}">회원가입</a>
+          </li>
+
+          <!-- 로그인 시 -->
+          <li th:if="${session.loginMember != null}">
+            <span th:text="${session.loginMember.name + '님'}"></span>
+          </li>
+          <li th:if="${session.loginMember != null}">
+            <a th:href="@{/member/logout}">로그아웃</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+</html>

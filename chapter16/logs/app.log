@@ -1,0 +1,238 @@
+2026-04-09T10:58:37.236+09:00  INFO 31888 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 31888 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T10:58:37.238+09:00 DEBUG 31888 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T10:58:37.238+09:00  INFO 31888 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T10:58:37.265+09:00  INFO 31888 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T10:58:37.270+09:00  INFO 31888 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T10:58:37.775+09:00  INFO 31888 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T10:58:37.784+09:00  INFO 31888 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T10:58:37.784+09:00  INFO 31888 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T10:58:37.807+09:00  INFO 31888 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 537 ms
+2026-04-09T10:58:38.077+09:00  INFO 31888 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-09T10:58:38.104+09:00  INFO 31888 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T10:58:38.107+09:00  INFO 31888 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.117 seconds (process running for 1.426)
+2026-04-09T10:58:38.379+09:00  INFO 31888 --- [chapter16] [RMI TCP Connection(3)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T10:58:38.380+09:00  INFO 31888 --- [chapter16] [RMI TCP Connection(3)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T10:58:38.380+09:00  INFO 31888 --- [chapter16] [RMI TCP Connection(3)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T10:58:42.332+09:00 DEBUG 31888 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : debug log
+2026-04-09T10:58:42.332+09:00  INFO 31888 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : info log
+2026-04-09T10:58:42.333+09:00  WARN 31888 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : warn log
+2026-04-09T10:58:42.333+09:00 ERROR 31888 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : error log
+2026-04-09T11:01:45.954+09:00  INFO 31888 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T11:01:46.001+09:00  INFO 31888 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T11:01:47.289+09:00  INFO 4020 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 4020 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T11:01:47.291+09:00 DEBUG 4020 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T11:01:47.291+09:00  INFO 4020 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T11:01:47.317+09:00  INFO 4020 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T11:01:47.317+09:00  INFO 4020 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T11:01:47.819+09:00  INFO 4020 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T11:01:47.827+09:00  INFO 4020 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T11:01:47.829+09:00  INFO 4020 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T11:01:47.852+09:00  INFO 4020 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 534 ms
+2026-04-09T11:01:48.117+09:00  INFO 4020 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-09T11:01:48.150+09:00  INFO 4020 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T11:01:48.154+09:00  INFO 4020 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.095 seconds (process running for 1.405)
+2026-04-09T11:01:48.419+09:00  INFO 4020 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T11:01:48.419+09:00  INFO 4020 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T11:01:48.420+09:00  INFO 4020 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-09T11:02:06.713+09:00 DEBUG 4020 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : debug log
+2026-04-09T11:02:06.713+09:00  INFO 4020 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : info log
+2026-04-09T11:02:06.713+09:00  WARN 4020 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : warn log
+2026-04-09T11:02:06.713+09:00 ERROR 4020 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : error log
+2026-04-09T11:08:21.983+09:00  INFO 4020 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T11:08:22.031+09:00  INFO 4020 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T11:08:23.296+09:00  INFO 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 15728 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T11:08:23.298+09:00 DEBUG 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T11:08:23.298+09:00  INFO 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T11:08:23.323+09:00  INFO 15728 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T11:08:23.323+09:00  INFO 15728 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T11:08:23.830+09:00  INFO 15728 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T11:08:23.838+09:00  INFO 15728 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T11:08:23.838+09:00  INFO 15728 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T11:08:23.863+09:00  INFO 15728 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 540 ms
+2026-04-09T11:08:24.146+09:00  INFO 15728 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-09T11:08:24.172+09:00  INFO 15728 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T11:08:24.176+09:00  INFO 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.111 seconds (process running for 1.414)
+2026-04-09T11:08:24.427+09:00  INFO 15728 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T11:08:24.427+09:00  INFO 15728 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T11:08:24.428+09:00  INFO 15728 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-09T11:08:27.733+09:00 DEBUG 15728 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : debug log
+2026-04-09T11:08:27.734+09:00  INFO 15728 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : info log
+2026-04-09T11:08:27.734+09:00  WARN 15728 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : warn log
+2026-04-09T11:08:27.734+09:00 ERROR 15728 --- [chapter16] [http-nio-8080-exec-1] c.e.chapter16.controller.LogController   : error log
+2026-04-09T15:10:58.646+09:00  INFO 15728 --- [chapter16] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-04-09T15:10:58.650+09:00  INFO 15728 --- [chapter16] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T15:10:58.702+09:00  INFO 15728 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T15:10:58.763+09:00  INFO 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 15728 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:10:58.763+09:00 DEBUG 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:10:58.763+09:00  INFO 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:10:58.885+09:00  INFO 15728 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:10:58.886+09:00  INFO 15728 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:10:58.886+09:00  INFO 15728 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:10:58.898+09:00  INFO 15728 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 133 ms
+2026-04-09T15:10:58.957+09:00  INFO 15728 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-04-09T15:10:58.966+09:00  INFO 15728 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T15:10:58.967+09:00  INFO 15728 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 0.223 seconds (process running for 14556.158)
+2026-04-09T15:10:58.969+09:00  INFO 15728 --- [chapter16] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   ConfigurationPropertiesReportEndpointAutoConfiguration#configurationPropertiesReportEndpointWebExtension matched:
+      - @ConditionalOnBean (types: org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpoint; SearchStrategy: all) found bean 'configurationPropertiesReportEndpoint'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.context.properties.ConfigurationPropertiesReportEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+
+   EnvironmentEndpointAutoConfiguration#environmentEndpointWebExtension matched:
+      - @ConditionalOnBean (types: org.springframework.boot.actuate.env.EnvironmentEndpoint; SearchStrategy: all) found bean 'environmentEndpoint'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.env.EnvironmentEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+
+   SbomEndpointAutoConfiguration#sbomEndpointWebExtension matched:
+      - @ConditionalOnBean (types: org.springframework.boot.actuate.sbom.SbomEndpoint; SearchStrategy: all) found bean 'sbomEndpoint'; @ConditionalOnMissingBean (types: org.springframework.boot.actuate.sbom.SbomEndpointWebExtension; SearchStrategy: all) did not find any beans (OnBeanCondition)
+      - @ConditionalOnAvailableEndpoint marked as exposed by a 'management.endpoints.web.exposure' property (OnAvailableEndpointCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2026-04-09T15:13:32.166+09:00  INFO 15728 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T15:13:32.217+09:00  INFO 15728 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T15:13:33.703+09:00  INFO 8492 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 8492 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:13:33.705+09:00 DEBUG 8492 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:13:33.705+09:00  INFO 8492 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:13:33.731+09:00  INFO 8492 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T15:13:33.732+09:00  INFO 8492 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T15:13:34.185+09:00  INFO 38240 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 38240 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:13:34.186+09:00 DEBUG 38240 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:13:34.187+09:00  INFO 38240 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:13:34.212+09:00  INFO 38240 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T15:13:34.213+09:00  INFO 38240 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T15:13:34.300+09:00  INFO 8492 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:13:34.307+09:00  INFO 8492 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:13:34.307+09:00  INFO 8492 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:13:34.331+09:00  INFO 8492 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 599 ms
+2026-04-09T15:13:34.642+09:00  INFO 8492 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-04-09T15:13:34.680+09:00  INFO 8492 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T15:13:34.684+09:00  INFO 8492 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.307 seconds (process running for 1.678)
+2026-04-09T15:13:34.751+09:00  INFO 38240 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:13:34.758+09:00  INFO 38240 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:13:34.758+09:00  INFO 38240 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:13:34.781+09:00  INFO 38240 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 568 ms
+2026-04-09T15:13:35.100+09:00  INFO 38240 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-04-09T15:13:35.128+09:00  WARN 38240 --- [chapter16] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-04-09T15:13:35.137+09:00  INFO 38240 --- [chapter16] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-09T15:13:35.147+09:00 ERROR 38240 --- [chapter16] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-04-09T15:13:35.191+09:00  INFO 8492 --- [chapter16] [RMI TCP Connection(1)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T15:13:35.192+09:00  INFO 8492 --- [chapter16] [RMI TCP Connection(1)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T15:13:35.193+09:00  INFO 8492 --- [chapter16] [RMI TCP Connection(1)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T15:13:59.444+09:00  INFO 8492 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T15:13:59.491+09:00  INFO 8492 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T15:14:08.652+09:00  INFO 13116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 13116 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:14:08.653+09:00 DEBUG 13116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:14:08.654+09:00  INFO 13116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:14:08.679+09:00  INFO 13116 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T15:14:08.679+09:00  INFO 13116 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T15:14:09.174+09:00  INFO 13116 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:14:09.180+09:00  INFO 13116 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:14:09.181+09:00  INFO 13116 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:14:09.204+09:00  INFO 13116 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 525 ms
+2026-04-09T15:14:09.480+09:00  INFO 13116 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-04-09T15:14:09.506+09:00  INFO 13116 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T15:14:09.509+09:00  INFO 13116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.096 seconds (process running for 1.409)
+2026-04-09T15:14:09.763+09:00  INFO 13116 --- [chapter16] [RMI TCP Connection(1)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T15:14:09.763+09:00  INFO 13116 --- [chapter16] [RMI TCP Connection(1)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T15:14:09.763+09:00  INFO 13116 --- [chapter16] [RMI TCP Connection(1)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T15:24:13.411+09:00  INFO 13116 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T15:24:13.468+09:00  INFO 13116 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T15:24:14.772+09:00  INFO 13772 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 13772 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:24:14.773+09:00 DEBUG 13772 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:24:14.773+09:00  INFO 13772 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:24:14.798+09:00  INFO 13772 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T15:24:14.798+09:00  INFO 13772 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T15:24:15.315+09:00  INFO 13772 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:24:15.321+09:00  INFO 13772 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:24:15.321+09:00  INFO 13772 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:24:15.346+09:00  INFO 13772 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 547 ms
+2026-04-09T15:24:15.633+09:00  INFO 13772 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-09T15:24:15.659+09:00  INFO 13772 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T15:24:15.663+09:00  INFO 13772 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.13 seconds (process running for 1.449)
+2026-04-09T15:24:15.874+09:00  INFO 13772 --- [chapter16] [RMI TCP Connection(3)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T15:24:15.874+09:00  INFO 13772 --- [chapter16] [RMI TCP Connection(3)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T15:24:15.875+09:00  INFO 13772 --- [chapter16] [RMI TCP Connection(3)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T15:29:07.435+09:00  INFO 13772 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T15:29:07.482+09:00  INFO 13772 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T15:29:08.754+09:00  INFO 25816 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 25816 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:29:08.756+09:00 DEBUG 25816 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:29:08.756+09:00  INFO 25816 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:29:08.781+09:00  INFO 25816 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T15:29:08.781+09:00  INFO 25816 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T15:29:09.284+09:00  INFO 25816 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:29:09.290+09:00  INFO 25816 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:29:09.290+09:00  INFO 25816 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:29:09.314+09:00  INFO 25816 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 532 ms
+2026-04-09T15:29:09.585+09:00  INFO 25816 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-04-09T15:29:09.610+09:00  INFO 25816 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T15:29:09.614+09:00  INFO 25816 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.11 seconds (process running for 1.422)
+2026-04-09T15:29:09.856+09:00  INFO 25816 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T15:29:09.857+09:00  INFO 25816 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T15:29:09.857+09:00  INFO 25816 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T15:30:20.478+09:00  INFO 25816 --- [chapter16] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-09T15:30:20.530+09:00  INFO 25816 --- [chapter16] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-09T15:30:21.789+09:00  INFO 28116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Starting Chapter16Application using Java 17.0.14 with PID 28116 (C:\Users\fzaca\IdeaProjects\chapter16\build\classes\java\main started by fzaca in C:\Users\fzaca\IdeaProjects\chapter16)
+2026-04-09T15:30:21.791+09:00 DEBUG 28116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Running with Spring Boot v4.0.5, Spring v7.0.6
+2026-04-09T15:30:21.791+09:00  INFO 28116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : No active profile set, falling back to 1 default profile: "default"
+2026-04-09T15:30:21.815+09:00  INFO 28116 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-09T15:30:21.815+09:00  INFO 28116 --- [chapter16] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-09T15:30:22.327+09:00  INFO 28116 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-04-09T15:30:22.335+09:00  INFO 28116 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:30:22.335+09:00  INFO 28116 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:30:22.360+09:00  INFO 28116 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 544 ms
+2026-04-09T15:30:22.651+09:00  INFO 28116 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-04-09T15:30:22.691+09:00  INFO 28116 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-09T15:30:22.692+09:00  INFO 28116 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-09T15:30:22.692+09:00  INFO 28116 --- [chapter16] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-09T15:30:22.702+09:00  INFO 28116 --- [chapter16] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 50 ms
+2026-04-09T15:30:22.707+09:00  INFO 28116 --- [chapter16] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/manage'
+2026-04-09T15:30:22.720+09:00  INFO 28116 --- [chapter16] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-09T15:30:22.723+09:00  INFO 28116 --- [chapter16] [restartedMain] c.e.chapter16.Chapter16Application       : Started Chapter16Application in 1.176 seconds (process running for 1.482)
+2026-04-09T15:30:22.908+09:00  INFO 28116 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-09T15:30:22.909+09:00  INFO 28116 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-09T15:30:22.909+09:00  INFO 28116 --- [chapter16] [RMI TCP Connection(4)-192.168.0.99] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-04-09T15:30:25.425+09:00  INFO 28116 --- [chapter16] [http-nio-127.0.0.1-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServletRegistration'
+2026-04-09T15:30:25.426+09:00  INFO 28116 --- [chapter16] [http-nio-127.0.0.1-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServletRegistration'
+2026-04-09T15:30:25.426+09:00  INFO 28116 --- [chapter16] [http-nio-127.0.0.1-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms

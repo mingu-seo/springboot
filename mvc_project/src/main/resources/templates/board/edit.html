@@ -1,0 +1,78 @@
+<div th:replace="~{layout/default :: layout(
+        ${'MVC 프로젝트'},
+        ~{::content}
+      )}">
+  <th:block th:fragment="content">
+  <!-- Toast UI Editor CDN -->
+  <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"/>
+  <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+  <script th:inline="javascript">
+    var editor;
+    var initialContent = /*[[${board.content}]]*/ '';
+
+    $(function() {
+      editor = new toastui.Editor({
+        el: document.querySelector('#editor'),
+        height: '400px',
+        initialEditType: 'wysiwyg',
+        previewStyle: 'vertical',
+        initialValue: initialContent
+      });
+    });
+
+    function goSave() {
+      if ($('#title').val().trim() === '') {
+        alert('제목을 입력하세요');
+        $('#title').focus();
+        return;
+      }
+      $('#content').val(editor.getHTML());
+      $('#frm').submit();
+    }
+  </script>
+  <div class="sub">
+    <div class="size">
+      <h3 class="sub_title">답변 게시판</h3>
+      <div class="bbs">
+        <form method="post" name="frm" id="frm"
+              th:action="@{/board/edit/{no}(no=${board.no})}" enctype="multipart/form-data">
+          <table class="board_write">
+            <tbody>
+            <tr>
+              <th>제목</th>
+              <td>
+                <input type="text" name="title" id="title" class="wid100" th:value="${board.title}"/>
+              </td>
+            </tr>
+            <tr>
+              <th>내용</th>
+              <td>
+                <div id="editor"></div>
+                <textarea name="content" id="content" style="display:none;"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <th>첨부파일</th>
+              <td>
+                                <span th:if="${board.filenameOrg != null and board.filenameOrg != ''}">
+                                    <label>
+                                        <input type="checkbox" name="fileDelete" value="true"> 기존파일삭제
+                                        (<span th:text="${board.filenameOrg}"></span>)
+                                    </label>
+                                    <br/>
+                                </span>
+                <input type="file" name="file" id="file" class="wid100"/>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="btnSet" style="text-align:right;">
+            <a class="btn" href="javascript:goSave();">저장</a>
+            <a class="btn" th:href="@{/board/list}">목록</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </th:block>
+</div>

@@ -1,0 +1,29 @@
+<!--
+    공통 페이징 컴포넌트
+    사용법: th:replace="~{fragments/pagination :: pagination(${pageResponse}, ${pageRequest}, '/board/list')}"
+-->
+<div th:fragment="pagination(pageResponse, pageRequest, baseUrl)" class="pagenate clear">
+    <ul class="paging" th:if="${pageResponse.totalPage > 0}">
+        <!-- 이전 -->
+        <li th:if="${pageResponse.prev}">
+            <a th:href="@{${baseUrl}(page=${pageResponse.startPage - 1},
+                        searchType=${pageRequest.searchType},
+                        searchWord=${pageRequest.searchWord})}">&lt;&lt;</a>
+        </li>
+        <!-- 페이지 번호 -->
+        <li th:each="p : ${#numbers.sequence(pageResponse.startPage, pageResponse.endPage)}">
+            <a th:if="${p == pageResponse.page}" href="#" class="current" th:text="${p}"></a>
+            <a th:unless="${p == pageResponse.page}"
+               th:href="@{${baseUrl}(page=${p},
+                         searchType=${pageRequest.searchType},
+                         searchWord=${pageRequest.searchWord})}"
+               th:text="${p}"></a>
+        </li>
+        <!-- 다음 -->
+        <li th:if="${pageResponse.next}">
+            <a th:href="@{${baseUrl}(page=${pageResponse.endPage + 1},
+                        searchType=${pageRequest.searchType},
+                        searchWord=${pageRequest.searchWord})}">&gt;&gt;</a>
+        </li>
+    </ul>
+</div>

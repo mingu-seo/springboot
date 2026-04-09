@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: chapter16
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG
+  file:
+    name: logs/app.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger - %msg%n"
+
+management:
+  server:
+    port: 8081               # 앱은 8080, actuator는 8081
+    address: 127.0.0.1       # 로컬에서만 접근 가능
+  endpoints:
+    web:
+      base-path: /manage     # /actuator → /manage 로 변경
+      path-mapping:
+        health: healthcheck  # /manage/healthcheck
